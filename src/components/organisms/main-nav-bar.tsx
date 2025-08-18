@@ -3,11 +3,11 @@
 import Image from "next/image";
 import logo from "@/logos/Myxellia logo.svg";
 import NavIconBtn from "../atoms/nav-icon-btn";
-import UserMenuBtn from "./user-menu-btn";
+import UserMenuBtn from "../molecules/user-menu-btn";
 import { mainNavItems } from "@/data/nav";
 import { useDispatch } from "react-redux";
 import { toggleBudgetModal } from "@/state/budget-modal-slice";
-import BudgetModal from "./budget-modal";
+import BudgetModal from "../molecules/budget-modal";
 
 const userSample = {
   firstName: "damilola",

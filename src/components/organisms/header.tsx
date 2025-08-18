@@ -1,4 +1,4 @@
-import MainNavBar from "../molecules/main-nav-bar";
+import MainNavBar from "./main-nav-bar";
 
 const Header = () => {
   return (
