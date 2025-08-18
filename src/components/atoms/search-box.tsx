@@ -1,6 +1,6 @@
 "use client";
 
-import { FormProvider, useForm, Controller } from "react-hook-form";
+import { FormProvider, useForm, Controller, SubmitHandler, FieldValues } from "react-hook-form";
 import { CiSearch } from "react-icons/ci";
 
 export type SaerchBoxProps = {
@@ -17,8 +17,9 @@ export const SearchBox = ({ placeholder }: SaerchBoxProps) => {
   });
 
   const { handleSubmit, control } = form;
-  const searchHandler = (data) => console.log(data);
-
+const searchHandler: SubmitHandler<FieldValues> = (data) => {
+    console.log(data);
+  };
   return (
     <FormProvider {...form}>
       <form
