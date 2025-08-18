@@ -9,8 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        mainBackground: "var(--mainBackground)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        secondary: {
+          background: "var(--secondary-background)",
+          foreground: "var(--secondary-foreground)",
+        },
+        muted: {
+          foreground: "var(--muted-foreground)",
+        },
+      },
+      fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"],
+        playfair: ["var(--font-playfair)", "serif"],
       },
     },
   },
