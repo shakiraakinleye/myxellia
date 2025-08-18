@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Popover } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 import UserAvatar from "../atoms/user-avatar";
-import UserTooltip from "./user-tooltip";
+import UserTooltip from "../atoms/user-tooltip";
 import { User } from "@/types/user";
 import UserMenu from "./user-menu";
 

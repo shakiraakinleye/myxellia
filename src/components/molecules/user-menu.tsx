@@ -2,7 +2,8 @@ import { Avatar, ButtonProps } from "@chakra-ui/react";
 import { User } from "@/types/user";
 import { TbLogout2 } from "react-icons/tb";
 import { Button } from "@chakra-ui/react";
-import { MenuItemProps, menuItems } from "@/data/menu-items";
+import { MenuItemProps, menuItems } from "@/data/nav";
+import Link from "next/link";
 
 const UserCard = ({ user }: Props) => {
   const { firstName, lastName, imageSrc, email } = user;
@@ -37,7 +38,7 @@ const MenuItem = ({ item, ...buttonProps }: ItemProps) => {
 
   return (
     <Button asChild className="w-full pointer-events-none" {...buttonProps}>
-      <a
+      <Link
         href={href}
         className="p-0 w-full h-fit"
         onClick={(e) => e.preventDefault()}
@@ -48,7 +49,7 @@ const MenuItem = ({ item, ...buttonProps }: ItemProps) => {
             {title}
           </span>
         </p>
-      </a>
+      </Link>
     </Button>
   );
 };
