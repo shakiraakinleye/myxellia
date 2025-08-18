@@ -1,7 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
+import budgetModalReducer from './budget-modal-slice'
 
 export const RootState = configureStore({
   reducer: {
+    budgetModal: budgetModalReducer,
   },
 })
 

@@ -6,17 +6,18 @@ import { Tooltip } from "../ui/tooltip";
 interface Props extends ButtonProps {
   icon: IconType;
   tooltip?: string;
-  disableBtn?: boolean;
+  disabled?: boolean;
+  onclick?: () => void;
 }
 
 const NavIconBtn = React.forwardRef<HTMLButtonElement, Props>(
-  ({ icon, tooltip, disableBtn = false, ...buttonProps }: Props) => {
-    const defaultClassName = disableBtn ? "pointer-events-none" : "";
+  ({ icon, tooltip, disabled = false, ...buttonProps }: Props) => {
+    const defaultClassName = disabled ? "pointer-events-none" : "hover:opacity-80";
     const Icon = icon;
     return (
       <Tooltip
         content={tooltip}
-        disabled={disableBtn || tooltip === undefined}
+        disabled={disabled || tooltip === undefined}
         openDelay={100}
         closeDelay={100}
         positioning={{ offset: { mainAxis: 4, crossAxis: 4 } }}
@@ -38,9 +39,8 @@ const NavIconBtn = React.forwardRef<HTMLButtonElement, Props>(
       </Tooltip>
     );
   }
-  
-)
+);
 
-NavIconBtn.displayName = "NavIconBtn"
+NavIconBtn.displayName = "NavIconBtn";
 
 export default NavIconBtn;

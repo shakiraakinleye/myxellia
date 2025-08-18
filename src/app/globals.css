@@ -5,7 +5,8 @@
 :root {
   --mainBackground: #fafafa;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #191919;
+  /* --foreground: #171717; previously used */
   --secondary-background: #242526;
   --secondary-foreground: #ffffff;
   --muted-foreground: #606060
