@@ -11,7 +11,10 @@ import { MdLock } from "react-icons/md";
 import { Url } from "next/dist/shared/lib/router/router";
 import { VscSettings } from "react-icons/vsc";
 import { LuTrendingUp } from "react-icons/lu";
-import { PiChartBarLight } from "react-icons/pi";
+import { PiChartBarLight, PiScroll, PiScrollFill, PiArticleLight, PiArticleFill } from "react-icons/pi";
+import { BiBriefcaseAlt2, BiSolidBriefcaseAlt2 } from "react-icons/bi";
+import { GoHome, GoHomeFill } from "react-icons/go";
+import { FaRegUser, FaUser } from "react-icons/fa";
 
 
 // MAIN NAVIGATION ITEMS
@@ -29,34 +32,33 @@ export const mainNavItems: NavItemProps[] = [
     disabled: true,
     onClick: () => {
       console.log("Notifications clicked");
-    }
+    },
   },
   {
     title: "budgeting",
     icon: TbCalculatorFilled,
     disabled: false,
-     onClick: () => {
+    onClick: () => {
       console.log("Budgeting clicked");
-    }
+    },
   },
   {
     title: "calendar",
     icon: TbCalendarWeekFilled,
     disabled: false,
-     onClick: () => {
+    onClick: () => {
       console.log("calendar clicked");
-    }
+    },
   },
   {
     title: "messages",
     icon: TbMessage2Filled,
     disabled: true,
-     onClick: () => {
+    onClick: () => {
       console.log("Messages clicked");
-    }
+    },
   },
 ];
-
 
 // USER MENU ITEMS
 export interface UserMenuItemProps {
@@ -90,7 +92,13 @@ export const userMenuItems: UserMenuItemProps[] = [
 ];
 
 // BUDGET MENU ITEMS
-export const budgetMenuItems = [
+export interface budgetMenuItemType {
+  title: string;
+  icon: IconType;
+  description: string;
+}
+
+export const budgetMenuItems: budgetMenuItemType[] = [
   {
     title: "Set up annual budgets by account category",
     description:
@@ -111,3 +119,44 @@ export const budgetMenuItems = [
   },
 ];
 
+// PAGES NAVIGACTION ITEMS
+export interface pagesNavItemType {
+  title: string;
+  icon: IconType;
+  activeIcon: IconType;
+  href: Url;
+  // disabled?: boolean;
+}
+
+export const pagesNavItems: pagesNavItemType[] = [
+  {
+    title: "dashboard",
+    href: "/",
+    icon: GoHome,
+    activeIcon: GoHomeFill,
+  },
+  {
+    title: "listings",
+    href: "/listings",
+    icon: BiBriefcaseAlt2,
+    activeIcon: BiSolidBriefcaseAlt2,
+  },
+  {
+    title: "users",
+    href: "/users",
+    icon: FaRegUser,
+    activeIcon: FaUser,
+  },
+  {
+    title: "request",
+    href: "/request",
+    icon: PiArticleLight,
+    activeIcon: PiArticleFill,
+  },
+  {
+    title: "applications",
+    href: "/applications",
+    icon: PiScroll,
+    activeIcon: PiScrollFill,
+  },
+];

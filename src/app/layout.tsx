@@ -27,13 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Providers>
-        <body
-          className={`${inter.variable} ${playfair.variable} antialiased min-h-screen w-full max-w-full bg-mainBackground selection:bg-zinc-300 transition-colors duration-700 ease-in`}
-        >
-          {children}
-        </body>
-      </Providers>
+      <body
+        className={`${inter.variable} ${playfair.variable} antialiased min-h-screen w-full max-w-full bg-mainBackground selection:bg-zinc-300 transition-colors duration-700 ease-in`}
+      >
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
