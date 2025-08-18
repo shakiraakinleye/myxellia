@@ -3,16 +3,26 @@
 @tailwind utilities;
 
 :root {
+  --mainBackground: #fafafa;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #191919;
+  /* --foreground: #171717; previously used */
+  --secondary-background: #242526;
+  --secondary-foreground: #ffffff;
+  --muted-100: #606060;
+  --muted-200: #3D3D3D;
+  --muted-300: #919191;
+  --border-100: #E4E4E4;
 }
 
-@media (prefers-color-scheme: dark) {
+
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
