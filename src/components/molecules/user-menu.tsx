@@ -2,7 +2,7 @@ import { Avatar, ButtonProps } from "@chakra-ui/react";
 import { User } from "@/types/user";
 import { TbLogout2 } from "react-icons/tb";
 import { Button } from "@chakra-ui/react";
-import { MenuItemProps, menuItems } from "@/data/nav";
+import { UserMenuItemProps, userMenuItems } from "@/data/nav";
 import Link from "next/link";
 
 const UserCard = ({ user }: Props) => {
@@ -29,7 +29,7 @@ const UserCard = ({ user }: Props) => {
 
 
 interface ItemProps extends ButtonProps {
-  item: MenuItemProps;
+  item: UserMenuItemProps;
 }
 
 const MenuItem = ({ item, ...buttonProps }: ItemProps) => {
@@ -83,7 +83,7 @@ const UserMenu = ({ user }: Props) => {
     <div className="bg-background pt-4 px-4 rounded-md overflow-hidden">
       <UserCard user={user} />
       <div>
-        {menuItems.map((item) => {
+        {userMenuItems.map((item) => {
           return <MenuItem key={item.title} item={item} />;
         })}
         <LogoutBtn />

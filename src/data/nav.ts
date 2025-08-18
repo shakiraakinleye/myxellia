@@ -9,12 +9,17 @@ import { RiContactsFill, RiShieldCheckFill } from "react-icons/ri";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdLock } from "react-icons/md";
 import { Url } from "next/dist/shared/lib/router/router";
+import { VscSettings } from "react-icons/vsc";
+import { LuTrendingUp } from "react-icons/lu";
+import { PiChartBarLight } from "react-icons/pi";
 
+
+// MAIN NAVIGATION ITEMS
 export interface NavItemProps {
   title: string;
   icon: IconType;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick: () => void;
 }
 
 export const mainNavItems: NavItemProps[] = [
@@ -52,18 +57,16 @@ export const mainNavItems: NavItemProps[] = [
   },
 ];
 
-export interface MenuItemProps extends NavItemProps {
+
+// USER MENU ITEMS
+export interface UserMenuItemProps {
+  title: string;
   href: Url;
+  icon: IconType;
+  disabled?: boolean;
 }
 
-// export interface MenuItemProps {
-//   title: string;
-//   href?: string | undefined;
-//   icon: IconType;
-//   disabled?: boolean;
-// }
-
-export const menuItems: MenuItemProps[] = [
+export const userMenuItems: UserMenuItemProps[] = [
   {
     title: "teams",
     icon: BsFillPeopleFill,
@@ -85,3 +88,26 @@ export const menuItems: MenuItemProps[] = [
     href: "",
   },
 ];
+
+// BUDGET MENU ITEMS
+export const budgetMenuItems = [
+  {
+    title: "Set up annual budgets by account category",
+    description:
+      "Allocate funds across income and expense lines with full visibility.",
+    icon: VscSettings,
+  },
+  {
+    title: "Track actuals vs budget in real time",
+    description:
+      "See how your community is performing against plan, month by month.",
+    icon: LuTrendingUp,
+  },
+  {
+    title: "Adjust figures and forecast with ease",
+    description:
+      "Edit amounts, apply percentage changes, or roll forward last year’s data—all in one place.",
+    icon: PiChartBarLight,
+  },
+];
+
