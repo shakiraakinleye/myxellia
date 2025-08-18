@@ -19,7 +19,11 @@ const config: Config = {
         muted: {
           100: "var(--muted-100)",
           200: "var(--muted-200)",
+          300: "var(--muted-300)",
         },
+        border: {
+          100: "var(--border-100)"
+        }
       },
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],

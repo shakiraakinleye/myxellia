@@ -23,7 +23,7 @@ const BudgetModal = () => {
       <Portal>
         <Dialog.Backdrop />
         <Dialog.Positioner>
-          <Dialog.Content className="p-0 bg-background w-fit max-w-[438px] rounded-lg overflow-hidden">
+          <Dialog.Content className="p-0 shadow-none bg-background w-fit max-w-[438px] rounded-lg overflow-hidden">
             <Dialog.Body className="p-0">
               <BudgetModalContent />
             </Dialog.Body>

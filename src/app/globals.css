@@ -11,7 +11,11 @@
   --secondary-foreground: #ffffff;
   --muted-100: #606060;
   --muted-200: #3D3D3D;
+  --muted-300: #919191;
+  --border-100: #E4E4E4;
 }
+
+
 
 /* @media (prefers-color-scheme: dark) {
   :root {
