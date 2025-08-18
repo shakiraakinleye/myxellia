@@ -21,7 +21,7 @@ const UserCard = ({ user }: Props) => {
         <p className="font-bold text-sm font-playfair capitalize">
           {firstName} {lastName}
         </p>
-        <p className="text-muted-foreground text-xs">{email}</p>
+        <p className="text-muted-100 text-xs">{email}</p>
       </div>
     </div>
   );

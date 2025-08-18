@@ -17,7 +17,8 @@ const config: Config = {
           foreground: "var(--secondary-foreground)",
         },
         muted: {
-          foreground: "var(--muted-foreground)",
+          100: "var(--muted-100)",
+          200: "var(--muted-200)",
         },
       },
       fontFamily: {

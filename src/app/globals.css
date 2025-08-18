@@ -9,7 +9,8 @@
   /* --foreground: #171717; previously used */
   --secondary-background: #242526;
   --secondary-foreground: #ffffff;
-  --muted-foreground: #606060
+  --muted-100: #606060;
+  --muted-200: #3D3D3D;
 }
 
 /* @media (prefers-color-scheme: dark) {

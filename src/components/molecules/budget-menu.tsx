@@ -22,7 +22,7 @@ const ListItem = ({
         <h3 className="text-base font-semibold text-foreground tracking-normal leading-5">
           {title}
         </h3>
-        <p className="text-xs text-muted-foreground tracking-normal leading-4">
+        <p className="text-xs text-muted-100 tracking-normal leading-4">
           {description}
         </p>
       </div>
