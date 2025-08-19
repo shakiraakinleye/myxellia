@@ -24,6 +24,7 @@ const FeaturedSlide = ({ featuredCategory, feature }: FeaturedSlideProps) => {
         alt={alt}
         fill
         className="w-full h-full rounded-lg objext-cover"
+        priority
       />
       <div className="z-20 absolute bottom-8 left-4 tracking-normal text-secondary-foreground">
         <p className="font-medium text-sm leading-4 uppercase">
