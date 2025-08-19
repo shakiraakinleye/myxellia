@@ -5,14 +5,12 @@ import { Button, Popover } from "@chakra-ui/react";
 import { Tooltip } from "../ui/tooltip";
 import UserAvatar from "../atoms/user-avatar";
 import UserTooltip from "../atoms/user-tooltip";
-import { User } from "@/types/user";
-import UserMenu from "./user-menu";
+import UserMenu from "./user-menu"
+import { useSelector } from "react-redux";
+import { RootState } from "@/state/store";
 
-interface Props {
-  user: User;
-}
-
-const UserMenuBtn = ({ user }: Props) => {
+const UserMenuBtn = () => {
+  const user = useSelector((state: RootState) => state.user.value);
   const [open, setOpen] = useState(false);
 
   return (

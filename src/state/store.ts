@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import budgetModalReducer from './budget-modal-slice'
+import salesFilterReducer from './sales-filter-slice';
+import userReducer from './user-slice';
 
 export const RootState = configureStore({
   reducer: {
     budgetModal: budgetModalReducer,
+    salesFilter: salesFilterReducer,
+    user: userReducer,
   },
 })
 

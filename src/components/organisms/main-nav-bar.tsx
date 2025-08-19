@@ -9,13 +9,6 @@ import { useDispatch } from "react-redux";
 import { toggleBudgetModal } from "@/state/budget-modal-slice";
 import BudgetModal from "../molecules/budget-modal";
 
-const userSample = {
-  firstName: "damilola",
-  lastName: "akinleye",
-  email: "shakiraakin@gmail.com",
-  imageSrc: "",
-};
-
 const MainNavBar = () => {
   const dispatch = useDispatch();
   const handleBudgetClick = () => {
@@ -58,7 +51,7 @@ const MainNavBar = () => {
                   );
               })}
             </div>
-            <UserMenuBtn user={userSample} />
+            <UserMenuBtn />
           </div>
         </div>
       </nav>

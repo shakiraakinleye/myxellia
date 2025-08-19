@@ -2,7 +2,7 @@ import Image from "next/image";
 import header from "@/images/budget-header.svg";
 import { IconType } from "react-icons";
 import { budgetMenuItems } from "@/data/nav";
-import { Button } from "@chakra-ui/react";
+import { Button } from "../atoms/button";
 
 const ListItem = ({
   title,
@@ -38,6 +38,8 @@ const BudgetModalContent = () => {
           src={header}
           alt="budget header"
           className="w-full object-fill rounded-t-lg"
+          priority
+          width={438}
         />
       </div>
 
@@ -52,10 +54,8 @@ const BudgetModalContent = () => {
             />
           ))}
         </ul>
-        <Button className="w-full rounded-full h-12 flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 transition-colors">
-          <span className="text-secondary-foreground font-semibold text-base leading-6">
-            Create Budget
-          </span>
+        <Button variant="primary" className="w-full h-12 rounded-full">
+          Create Budget
         </Button>
       </div>
     </div>
