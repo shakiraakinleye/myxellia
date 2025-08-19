@@ -11,6 +11,8 @@ import { useQuery } from "@tanstack/react-query";
 import { getSalesData } from "@/actions/user-actions";
 import SalesChart from "../molecules/sales-chart";
 import SalesSummary from "../molecules/sales-summary";
+import LoadingState from "../atoms/loading-state";
+import ErrorState from "../atoms/error-state";
 
 const SalesDataDisplay = () => {
   const dispatch = useDispatch();
@@ -21,7 +23,7 @@ const SalesDataDisplay = () => {
   useEffect(() => {
     //   First set the default filter
     setFilter(salesViewFilters[salesViewFilters.length - 1].value);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const currentFilter = useSelector(
@@ -65,9 +67,9 @@ const SalesDataDisplay = () => {
           setFilter={setFilter}
         />
       </div>
-      <div className="w-full flex items-center p-5">
-        {isPending && <p>Loading...</p>}
-        {error && <p>Error loading sales data</p>}
+      <div className="w-full flex items-center justify-center p-5">
+        {isPending && <LoadingState />}
+        {error && <ErrorState message={error.message} />}
         {data && (
           <>
             <div className="flex-1">
