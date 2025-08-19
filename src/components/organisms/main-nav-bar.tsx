@@ -7,12 +7,16 @@ import UserMenuBtn from "../molecules/user-menu-btn";
 import { mainNavItems } from "@/data/nav";
 import { useDispatch } from "react-redux";
 import { toggleBudgetModal } from "@/state/budget-modal-slice";
+import { toggleCalendarDrawer } from "@/state/calendar-drawer-slice";
 import BudgetModal from "../molecules/budget-modal";
 
 const MainNavBar = () => {
   const dispatch = useDispatch();
   const handleBudgetClick = () => {
     dispatch(toggleBudgetModal());
+  };
+  const handleCalendarClick = () => {
+    dispatch(toggleCalendarDrawer());
   };
 
   return (
@@ -26,7 +30,7 @@ const MainNavBar = () => {
             <div className="flex  gap-x-4 xl:gap-x-6 items-center text-white font-playfair">
               {mainNavItems.map((item, index) => {
                 const { icon, title, disabled, onClick } = item;
-                // For budgeting nav button, use the onClick from the item directly
+                // For budgeting nav button, passed an handler 
                 if (title === "budgeting") {
                   return (
                     <NavIconBtn
@@ -38,7 +42,19 @@ const MainNavBar = () => {
                     />
                   );
                 }
-                // For other nav buttons, use the onClick from the item directly
+                // For calendar nav button, also passed an handler 
+                if (title === "calendar") {
+                  return (
+                    <NavIconBtn
+                      key={index}
+                      icon={icon}
+                      tooltip={title}
+                      disabled={disabled}
+                      onClick={handleCalendarClick}
+                    />
+                  );
+                }
+                // For other nav buttons, use the onClick from the item
                 else
                   return (
                     <NavIconBtn

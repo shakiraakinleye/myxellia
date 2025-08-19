@@ -6,12 +6,12 @@
   --mainBackground: #fafafa;
   --background: #ffffff;
   --foreground: #191919;
-  /* --foreground: #171717; previously used */
   --secondary-background: #242526;
   --secondary-foreground: #ffffff;
 
   /* dark */
-  --dark-100: #141414
+  --dark-100: #141414;
+  --dark-200: #121212;
   
   /* muted */
   --muted-100: #606060;
