@@ -17,14 +17,13 @@ const SummaryCard = ({ saleSummary, cardColor }: SalesSummaryProps) => {
   const { title, value, growth } = saleSummary;
   const increasedGrowth = growth >= 0;
   const formattedValue = currencyFormatter(value, "NGN", "symbol");
-  console.log("cardColor", cardColor);
 
   return (
     <div className="p-4 bg-background border border-border-100 rounded-xl flex flex-col items-start gap-y-1 tracking-normal ">
       <h3 className={cx("text-lg leading-6 font-semibold", cardColor)}>
         {formattedValue}
       </h3>
-      <p className="flex items-center gap-x-2 text-xxs leading-3">
+      <div className="flex items-center gap-x-2 text-xxs leading-3">
         <span
           className={cx(
             "text-muted-200 font-medium",
@@ -51,7 +50,7 @@ const SummaryCard = ({ saleSummary, cardColor }: SalesSummaryProps) => {
             {growth}%
           </span>
         </p>
-      </p>
+      </div>
     </div>
   );
 };

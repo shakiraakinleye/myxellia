@@ -1,0 +1,6 @@
+.swiper-pagination-bullet {
+  @apply opacity-30 w-2 h-2 bg-background mx-1 transition-colors;
+}
+.swiper-pagination-bullet-active {
+  @apply opacity-100;
+}

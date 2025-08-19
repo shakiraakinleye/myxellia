@@ -4,10 +4,10 @@ import DashboardOverviews from "./overviews";
 
 const Dashboard = () => {
   return (
-    <div className="w-full max-w-screen-xl flex flex-col justify-start py-4 gap-y-6">
+    <div className="w-full max-w-screen-xl flex flex-col justify-start gap-y-6">
       <DashboardUser />
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-5 justify-between">
         <div className="col-span-2">
           <SalesDataDisplay />
         </div>
