@@ -21,6 +21,7 @@ const SalesDataDisplay = () => {
   useEffect(() => {
     //   First set the default filter
     setFilter(salesViewFilters[salesViewFilters.length - 1].value);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const currentFilter = useSelector(
