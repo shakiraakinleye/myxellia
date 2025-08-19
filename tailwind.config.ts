@@ -22,7 +22,8 @@ const config: Config = {
           300: "var(--muted-300)",
         },
         border: {
-          100: "var(--border-100)"
+          100: "var(--border-100)",
+          200: "var(--border-200)",
         }
       },
       fontFamily: {

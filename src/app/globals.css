@@ -9,10 +9,15 @@
   /* --foreground: #171717; previously used */
   --secondary-background: #242526;
   --secondary-foreground: #ffffff;
+
+  /* muted */
   --muted-100: #606060;
   --muted-200: #3D3D3D;
   --muted-300: #919191;
+
+  /* border */
   --border-100: #E4E4E4;
+  --border-200: #D6D6D6;
 }
 
 

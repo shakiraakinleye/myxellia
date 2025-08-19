@@ -11,7 +11,7 @@ interface Props extends ButtonProps {
 }
 
 const NavIconBtn = React.forwardRef<HTMLButtonElement, Props>(
-  ({ icon, tooltip, disabled = false, ...buttonProps }: Props) => {
+  ({ icon, tooltip, disabled = false, ...buttonProps }: Props, ref) => {
     const defaultClassName = disabled ? "pointer-events-none" : "hover:opacity-80";
     const Icon = icon;
     return (
@@ -33,7 +33,7 @@ const NavIconBtn = React.forwardRef<HTMLButtonElement, Props>(
           },
         }}
       >
-        <Button className={defaultClassName} {...buttonProps}>
+        <Button className={defaultClassName} ref={ref} {...buttonProps}>
           <Icon className="md:w-6 md:h-6 xl:w-8 xl:h-8" />
         </Button>
       </Tooltip>
