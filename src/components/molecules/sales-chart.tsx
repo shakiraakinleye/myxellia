@@ -5,8 +5,6 @@ import { Bar, BarChart, XAxis, YAxis } from "recharts";
 import { SalesData, FilteredSalesData } from "@/types/dashboard";
 
 const SalesChart = ({ salesData }: { salesData: SalesData }) => {
-  console.log("chartData", salesData);
-
   const key = salesData.chartKey;
   const data = salesData.data;
   const chart = useChart({
