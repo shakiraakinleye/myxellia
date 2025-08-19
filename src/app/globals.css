@@ -3,16 +3,41 @@
 @tailwind utilities;
 
 :root {
+  --mainBackground: #fafafa;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #191919;
+  /* --foreground: #171717; previously used */
+  --secondary-background: #242526;
+  --secondary-foreground: #ffffff;
+
+  /* dark */
+  --dark-100: #141414
+  
+  /* muted */
+  --muted-100: #606060;
+  --muted-200: #3D3D3D;
+  --muted-300: #919191;
+  --muted-400: #292929;
+
+  /* border */
+  --border-100: #E4E4E4;
+  --border-200: #D6D6D6;
+
+  /* chart */
+  --chart-green: #12B76A;
+  --chart-red: #F04438;
+  --chart-teal: #14B8A6;
+  --chart-blue: #4545FE;
 }
 
-@media (prefers-color-scheme: dark) {
+
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
