@@ -7,12 +7,14 @@ import { useQuery } from "@tanstack/react-query";
 import { getlistingsData, getUsersData } from "@/actions/user-actions";
 import { IoHomeOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
+import LoadingState from "../atoms/loading-state";
+import ErrorState from "../atoms/error-state";
 
 const DashboardOverviews = () => {
   const { id } = useSelector((state: RootState) => state.user.value);
   const {
     isPending: listingsPending,
-    // error: listingsError,
+    error: listingsError,
     data: listingsData,
   } = useQuery({
     queryKey: ["listingsData", id],
@@ -23,7 +25,7 @@ const DashboardOverviews = () => {
   });
   const {
     isPending: usersDataPending,
-    // error: usersDataError,
+    error: usersDataError,
     data: usersData,
   } = useQuery({
     queryKey: ["usersData", id],
@@ -34,9 +36,10 @@ const DashboardOverviews = () => {
   });
 
   return (
-    <div className="h-full flex flex-col justify-between gap-y-5 shrink-0">
+    <div className="h-full grid grid-rows-[1fr_1fr] gap-y-5 shrink-0">
       {/* lisitngs */}
-      {listingsPending && <p>Loading...</p>}
+      {listingsPending && <LoadingState />}
+      {listingsError && <ErrorState message={listingsError.message} />}
       {listingsData && (
         <OverviewCard
           cardTitle="lisitings overview"
@@ -46,7 +49,8 @@ const DashboardOverviews = () => {
         />
       )}
       {/* users */}
-      {usersDataPending && <p>Loading...</p>}
+      {usersDataPending && <LoadingState />}
+      {usersDataError && <ErrorState message={usersDataError.message} />}
       {usersData && (
         <OverviewCard
           cardTitle="users overview"
@@ -54,7 +58,7 @@ const DashboardOverviews = () => {
           href="/users"
           data={usersData}
         />
-      )}{" "}
+      )}
     </div>
   );
 };
