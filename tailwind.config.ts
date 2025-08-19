@@ -31,6 +31,7 @@ const config: Config = {
         },
         dark: {
           100: "var(--dark-100)",
+          200: "var(--dark-200)",
         },
         chart: {
           blue: "var(--chart-blue)",
